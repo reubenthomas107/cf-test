@@ -21,3 +21,10 @@ while True:
 
     # Sleep for a specific interval before checking for updates again
     time.sleep(60)  # Sleep for 60 seconds before checking for updates
+
+    
+#For Realtime fetch - setup cronjobs
+crontab -e
+0 */6 * * * python /path/to/cf_daemon.py
+
+crontab -l
